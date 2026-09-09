@@ -3,9 +3,9 @@ DECODEPHONE V1 DEPLOY GUIDE
 
 1. Push to GitHub
 
-Create an empty repository on GitHub, then run these commands from this folder:
+The repository is already available at https://github.com/mehndibyseemaofficial-cpu/decodephone. From this folder, run:
 
-  git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPOSITORY>.git
+  git remote set-url origin https://github.com/mehndibyseemaofficial-cpu/decodephone.git
   git branch -M main
   git push -u origin main
 
@@ -14,6 +14,7 @@ Create an empty repository on GitHub, then run these commands from this folder:
 - Open https://vercel.com/new and import the GitHub repository.
 - Keep Framework Preset set to Next.js.
 - Keep the default Build Command: npm run build.
+- The repository includes vercel.json with the Next.js framework and build command configured.
 - Add these environment variables if using Supabase:
     NEXT_PUBLIC_SUPABASE_URL=<your-supabase-project-url>
     NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
