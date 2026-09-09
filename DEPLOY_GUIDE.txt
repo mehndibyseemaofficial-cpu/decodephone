@@ -1,0 +1,23 @@
+DECODEPHONE V1 DEPLOY GUIDE
+============================
+
+1. Push to GitHub
+
+Create an empty repository on GitHub, then run these commands from this folder:
+
+  git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPOSITORY>.git
+  git branch -M main
+  git push -u origin main
+
+2. Deploy with Vercel
+
+- Open https://vercel.com/new and import the GitHub repository.
+- Keep Framework Preset set to Next.js.
+- Keep the default Build Command: npm run build.
+- Add these environment variables if using Supabase:
+    NEXT_PUBLIC_SUPABASE_URL=<your-supabase-project-url>
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
+- Click Deploy.
+- Open the deployment URL and verify the home page, phone details tabs, compare controls, and /api/phones.
+
+Supabase is optional for V1. Without those environment variables, /api/phones serves the bundled mock phone catalog.
