@@ -12,9 +12,6 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "static.91mobiles.com" }
     ]
   },
-  turbopack: {
-    root: "C:\\Users\\bhavn\\decodephone"
-  }
-};
+}
 
 export default nextConfig;
